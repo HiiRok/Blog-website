@@ -1,0 +1,17 @@
+<%-include("partials/header")-%>
+
+
+
+
+
+<% arr.forEach(function(ele){ %>
+    <div>
+        <h2><%= ele.title %></h2>
+        <p><%= ele.content.substr(0,100)+".."%><a href="/post/<%=ele.title%>">read more</a></p>
+    </div>    
+<%})%>
+
+<form action="/compose" method="post">
+    <button type="submit" class="btn btn-primary">compose</button>
+</form>
+<%-include("partials/footer")-%>
